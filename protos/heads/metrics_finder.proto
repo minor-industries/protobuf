@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package heads;
+
+import "common.proto";
+
+
+message AddServiceIn {
+  string hostname = 1;
+  string service = 2;
+  int64 port = 3;
+}
+
+service Finder {
+  rpc add_service(AddServiceIn) returns (Empty);
+}
